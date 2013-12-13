@@ -3,8 +3,8 @@ package handlers
 import (
 	"errors"
 	codecsservices "github.com/stretchr/codecs/services"
-	"github.com/stretchr/goweb/context"
-	handlers_test "github.com/stretchr/goweb/handlers/test"
+	"github.com/thenonameguy/goweb/context"
+	handlers_test "github.com/thenonameguy/goweb/handlers/test"
 	"github.com/stretchr/testify/assert"
 	http_test "github.com/stretchr/testify/http"
 	"github.com/stretchr/testify/mock"

@@ -1,8 +1,8 @@
 package responders
 
 import (
-	"github.com/stretchr/goweb/context"
-	"github.com/stretchr/goweb/paths"
+	"github.com/thenonameguy/goweb/context"
+	"github.com/thenonameguy/goweb/paths"
 	"net/http"
 )
 

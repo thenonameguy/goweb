@@ -1,8 +1,8 @@
 package responders
 
 import (
-	"github.com/stretchr/goweb/context"
-	context_test "github.com/stretchr/goweb/webcontext/test"
+	"github.com/thenonameguy/goweb/context"
+	context_test "github.com/thenonameguy/goweb/webcontext/test"
 	"github.com/stretchr/testify/assert"
 	"net/http"
 	"testing"
@@ -49,7 +49,7 @@ func TestHTTP_WithStatusAndText(t *testing.T) {
 
 }
 
-// https://github.com/stretchr/goweb/issues/30
+// https://github.com/thenonameguy/goweb/issues/30
 func TestHTTP_WithStatus_WithAlways200(t *testing.T) {
 
 	httpResponder := new(GowebHTTPResponder)

@@ -65,7 +65,7 @@ func (p *PathPattern) GetPathMatch(path *Path) *PathMatch {
 	lastCheckSegmentType := getSegmentType(lastCheckSegment)
 
 	// handle catchall prefix, prefix literal, etc
-	// https://github.com/stretchr/goweb/issues/53
+	// https://github.com/thenonameguy/goweb/issues/53
 	if getSegmentType(checkSegments[0]) == segmentTypeCatchall {
 		//ensure we are working with only literals
 		for _, pathSegment := range pathSegments {

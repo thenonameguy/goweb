@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/stretchr/goweb/context"
+	"github.com/thenonameguy/goweb/context"
 )
 
 // MatcherFuncDecision is the return type of MatcherFunc and should be

@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	handlers_test "github.com/stretchr/goweb/handlers/test"
-	context_test "github.com/stretchr/goweb/webcontext/test"
+	handlers_test "github.com/thenonameguy/goweb/handlers/test"
+	context_test "github.com/thenonameguy/goweb/webcontext/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"testing"

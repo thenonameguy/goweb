@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/stretchr/codecs/services"
-	"github.com/stretchr/goweb"
-	"github.com/stretchr/goweb/handlers"
+	"github.com/thenonameguy/goweb"
+	"github.com/thenonameguy/goweb/handlers"
 	"github.com/stretchr/testify/assert"
 	testifyhttp "github.com/stretchr/testify/http"
 	"net/http"

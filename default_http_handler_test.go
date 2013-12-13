@@ -1,7 +1,7 @@
 package goweb
 
 import (
-	"github.com/stretchr/goweb/handlers"
+	"github.com/thenonameguy/goweb/handlers"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

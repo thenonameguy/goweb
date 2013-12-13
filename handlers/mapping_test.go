@@ -3,11 +3,11 @@ package handlers
 import (
 	"fmt"
 	codecsservices "github.com/stretchr/codecs/services"
-	"github.com/stretchr/goweb/context"
-	controllers_test "github.com/stretchr/goweb/controllers/test"
-	handlers_test "github.com/stretchr/goweb/handlers/test"
-	goweb_http "github.com/stretchr/goweb/http"
-	context_test "github.com/stretchr/goweb/webcontext/test"
+	"github.com/thenonameguy/goweb/context"
+	controllers_test "github.com/thenonameguy/goweb/controllers/test"
+	handlers_test "github.com/thenonameguy/goweb/handlers/test"
+	goweb_http "github.com/thenonameguy/goweb/http"
+	context_test "github.com/thenonameguy/goweb/webcontext/test"
 	"github.com/stretchr/testify/assert"
 	http_test "github.com/stretchr/testify/http"
 	"github.com/stretchr/testify/mock"
@@ -48,7 +48,7 @@ func TestHandlerForOptions_PlainHandler(t *testing.T) {
 
 }
 
-// https://github.com/stretchr/goweb/issues/19
+// https://github.com/thenonameguy/goweb/issues/19
 func TestMappedHandlersBreakExecution(t *testing.T) {
 
 	codecService := codecsservices.NewWebCodecService()

@@ -1,7 +1,7 @@
 package handlers_test
 
 import (
-	"github.com/stretchr/goweb/context"
+	"github.com/thenonameguy/goweb/context"
 	"github.com/stretchr/testify/mock"
 )
 

@@ -9,7 +9,7 @@
 // If you are not following RESTful patterns, you can do custom routing using the goweb.Map function.
 //
 // See some real world examples of how to use Goweb by checking out the
-// example web app code: https://github.com/stretchr/goweb/blob/master/example_webapp/main.go
+// example web app code: https://github.com/thenonameguy/goweb/blob/master/example_webapp/main.go
 //
 // Example
 //
@@ -88,16 +88,16 @@
 // If you're building an API, you can respond using the `goweb.API` object, if you just
 // need to respond in a normal HTTP manner, you can use the `goweb.Respond` object.
 //
-// For details on how to make normal HTTP responses, see http://godoc.org/github.com/stretchr/goweb/responders#HTTPResponder
+// For details on how to make normal HTTP responses, see http://godoc.org/github.com/thenonameguy/goweb/responders#HTTPResponder
 //
-// For details on how to make API responses, see http://godoc.org/github.com/stretchr/goweb/responders#APIResponder
+// For details on how to make API responses, see http://godoc.org/github.com/thenonameguy/goweb/responders#APIResponder
 //
 // Writing tests
 //
 // Writing unit tests for your Goweb code is made possible via the `goweb.Test` and `goweb.TestOn` functions,
 // and with a little help from the Testify HTTP package, see http://godoc.org/github.com/stretchr/testify/http
 //
-// For a real example of what tests look like, see the tests in the example web app: https://github.com/stretchr/goweb/blob/master/example_webapp/main_test.go
+// For a real example of what tests look like, see the tests in the example web app: https://github.com/thenonameguy/goweb/blob/master/example_webapp/main_test.go
 //
 //
 // Working with JSONP

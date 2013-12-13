@@ -3,7 +3,7 @@ package webcontext_test
 import (
 	"fmt"
 	codecsservices "github.com/stretchr/codecs/services"
-	"github.com/stretchr/goweb/webcontext"
+	"github.com/thenonameguy/goweb/webcontext"
 	http_test "github.com/stretchr/testify/http"
 	"net/http"
 	"strings"

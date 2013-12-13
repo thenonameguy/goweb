@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/stretchr/goweb/context"
+	"github.com/thenonameguy/goweb/context"
 )
 
 // Handler represents an object capable of handling a request.

@@ -2,10 +2,10 @@ package handlers
 
 import (
 	"fmt"
-	"github.com/stretchr/goweb/context"
-	"github.com/stretchr/goweb/controllers"
-	"github.com/stretchr/goweb/http"
-	"github.com/stretchr/goweb/paths"
+	"github.com/thenonameguy/goweb/context"
+	"github.com/thenonameguy/goweb/controllers"
+	"github.com/thenonameguy/goweb/http"
+	"github.com/thenonameguy/goweb/paths"
 	stewstrings "github.com/stretchr/stew/strings"
 	nethttp "net/http"
 	"strings"

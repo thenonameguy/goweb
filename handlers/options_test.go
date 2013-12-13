@@ -2,7 +2,7 @@ package handlers
 
 import (
 	codecsservices "github.com/stretchr/codecs/services"
-	"github.com/stretchr/goweb/controllers/test"
+	"github.com/thenonameguy/goweb/controllers/test"
 	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"

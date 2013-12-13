@@ -49,6 +49,8 @@ type APIResponder interface {
 
 	// Responds to the Context with the specified status, data and errors.
 	Respond(ctx context.Context, status int, data interface{}, errors []string) error
+	// Responds to the Context with the specified status, data, errors and label.
+	RespondLabel(ctx context.Context, status int, data interface{}, errors []string, label string) error
 
 	// WriteResponseObject writes the status code and response object to the HttpResponseWriter in
 	// the specified context, in the format best suited based on the request.
@@ -62,6 +64,9 @@ type APIResponder interface {
 
 	// RespondWithData responds with the specified data, no errors and a 200 StatusOK response.
 	RespondWithData(ctx context.Context, data interface{}) error
+
+	// RespondWithDataLabel responds with the specified data, no errors, 200 StatusOK and the data contained in the given label.
+	RespondWithDataLabel(ctx context.Context, data interface{}, label string) error
 
 	// RespondWithError responds with the specified error message and status code.
 	RespondWithError(ctx context.Context, status int, err string) error

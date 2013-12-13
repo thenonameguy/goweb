@@ -2,7 +2,7 @@ package goweb
 
 import (
 	codecsservices "github.com/stretchr/codecs/services"
-	"github.com/stretchr/goweb/responders"
+	"github.com/thenonameguy/goweb/responders"
 )
 
 // CodecService is the service class that provides codec capabilities to Goweb.

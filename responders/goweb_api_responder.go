@@ -173,9 +173,56 @@ func (a *GowebAPIResponder) Respond(ctx context.Context, status int, data interf
 
 }
 
+func (a *GowebAPIResponder) RespondLabel(ctx context.Context, status int, data interface{}, errors []string, label string) error {
+
+	if data != nil {
+
+		var dataErr error
+		data, dataErr = codecs.PublicData(data, nil)
+
+		if dataErr != nil {
+			return dataErr
+		}
+
+	}
+
+	// make the standard response object
+	if (a.AlwaysEnvelopResponse && ctx.QueryValue("envelop") != "false") || ctx.QueryValue("envelop") == "true" {
+		sro := map[string]interface{}{
+			a.StandardFieldStatusKey: status,
+		}
+
+		if data != nil {
+			sro[label] = data
+		}
+
+		if len(errors) > 0 {
+			sro[a.StandardFieldErrorsKey] = errors
+		}
+
+		data = sro
+	}
+
+	// transform the object
+	var transformErr error
+	data, transformErr = a.TransformStandardResponseObject(ctx, data)
+
+	if transformErr != nil {
+		return transformErr
+	}
+
+	return a.WriteResponseObject(ctx, status, data)
+
+}
+
 // RespondWithData responds with the specified data, no errors and a 200 StatusOK response.
 func (a *GowebAPIResponder) RespondWithData(ctx context.Context, data interface{}) error {
 	return a.Respond(ctx, http.StatusOK, data, nil)
+}
+
+// RespondWithDataLabel responds with the specified data, no errors, 200 StatusOK and the data contained in the given label.
+func (a *GowebAPIResponder) RespondWithDataLabel(ctx context.Context, data interface{}, label string) error {
+	return a.RespondLabel(ctx, http.StatusOK, data, nil, label)
 }
 
 // RespondWithError responds with the specified error and status code.

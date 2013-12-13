@@ -44,6 +44,20 @@ func TestRespond(t *testing.T) {
 
 }
 
+func TestRespondLabel(t *testing.T) {
+
+	http := new(GowebHTTPResponder)
+	codecService := codecsservices.NewWebCodecService()
+	API := NewGowebAPIResponder(codecService, http)
+	ctx := context_test.MakeTestContext()
+	data := map[string]interface{}{"name": "Mat"}
+
+	API.RespondLabel(ctx, 200, data, nil, "person")
+
+	assert.Equal(t, context_test.TestResponseWriter.Output, "{\"person\":{\"name\":\"Mat\"},\"s\":200}")
+
+}
+
 func TestRespondEnvelopOptions(t *testing.T) {
 
 	http := new(GowebHTTPResponder)
@@ -253,6 +267,20 @@ func TestAPI_RespondWithData(t *testing.T) {
 	API.RespondWithData(ctx, data)
 
 	assert.Equal(t, context_test.TestResponseWriter.Output, "{\"d\":{\"name\":\"Mat\"},\"s\":200}")
+
+}
+
+func TestAPI_RespondWithDataLabel(t *testing.T) {
+
+	http := new(GowebHTTPResponder)
+	codecService := codecsservices.NewWebCodecService()
+	API := NewGowebAPIResponder(codecService, http)
+	ctx := context_test.MakeTestContext()
+	data := map[string]interface{}{"name": "Mat"}
+
+	API.RespondWithDataLabel(ctx, data, "person")
+
+	assert.Equal(t, context_test.TestResponseWriter.Output, "{\"person\":{\"name\":\"Mat\"},\"s\":200}")
 
 }
 
